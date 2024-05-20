@@ -785,7 +785,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &57118290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18790,7 +18790,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &1355655582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21214,7 +21214,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &1506075907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21734,7 +21734,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &1535506697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22992,7 +22992,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &1618007433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28926,7 +28926,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &2078594476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29789,7 +29789,7 @@ MonoBehaviour:
   MaxStep: 0
   Target1: {fileID: 553961961}
   Speed: 1
-  Range: 5
+  Range: 10
 --- !u!114 &2140757657
 MonoBehaviour:
   m_ObjectHideFlags: 0

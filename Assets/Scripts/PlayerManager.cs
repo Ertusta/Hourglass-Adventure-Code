@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour
     private GameObject currentItem;
 
     public GameObject deadScreen;
+
+    public GameObject Light;
     
     private void Update()
     {
@@ -65,6 +67,7 @@ public class PlayerManager : MonoBehaviour
                 if (clockCount == totalClock)
                 {
                     Debug.Log("All clocks collected, level cleared!");
+                    Light.SetActive(true);
                     // GO TO WIN SCENE SINCE ALL THE CLOCKS ARE COLLECTED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 }
 

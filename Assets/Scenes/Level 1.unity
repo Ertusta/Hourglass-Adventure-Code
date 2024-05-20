@@ -2300,6 +2300,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (4)
@@ -2679,6 +2695,9 @@ GameObject:
   - component: {fileID: 153838246}
   - component: {fileID: 153838245}
   - component: {fileID: 153838244}
+  - component: {fileID: 153838249}
+  - component: {fileID: 153838248}
+  - component: {fileID: 153838247}
   m_Layer: 0
   m_Name: Demo Enemy  (1)
   m_TagString: Untagged
@@ -2695,11 +2714,11 @@ Transform:
   m_GameObject: {fileID: 153838242}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1032248, y: 0, z: 0}
+  m_LocalPosition: {x: -21.64, y: 1.7004012, z: 28.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &153838244
 SphereCollider:
@@ -2774,6 +2793,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153838242}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &153838247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153838242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &153838248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153838242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &153838249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153838242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &154990737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5897,6 +5979,9 @@ GameObject:
   - component: {fileID: 304617083}
   - component: {fileID: 304617082}
   - component: {fileID: 304617081}
+  - component: {fileID: 304617086}
+  - component: {fileID: 304617085}
+  - component: {fileID: 304617084}
   m_Layer: 0
   m_Name: Demo Enemy  (9)
   m_TagString: Untagged
@@ -5913,11 +5998,11 @@ Transform:
   m_GameObject: {fileID: 304617079}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.01164, y: -0.78732955, z: -18.769276}
+  m_LocalPosition: {x: -19.84, y: 0.91307163, z: 17.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &304617081
 SphereCollider:
@@ -5992,6 +6077,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304617079}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &304617084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304617079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &304617085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304617079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &304617086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304617079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &309411489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6754,6 +6902,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire
@@ -8316,6 +8480,9 @@ GameObject:
   - component: {fileID: 460362720}
   - component: {fileID: 460362719}
   - component: {fileID: 460362718}
+  - component: {fileID: 460362723}
+  - component: {fileID: 460362722}
+  - component: {fileID: 460362721}
   m_Layer: 0
   m_Name: Demo Enemy  (2)
   m_TagString: Untagged
@@ -8332,11 +8499,11 @@ Transform:
   m_GameObject: {fileID: 460362716}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.813447, y: -0.78732955, z: -36.392914}
+  m_LocalPosition: {x: -3.9034224, y: 0.91307163, z: 19.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &460362718
 SphereCollider:
@@ -8411,6 +8578,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460362716}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &460362721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460362716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &460362722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460362716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &460362723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460362716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &470746973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8931,6 +9161,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (3)
@@ -11456,6 +11702,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (5)
@@ -12181,6 +12443,9 @@ GameObject:
   - component: {fileID: 677940034}
   - component: {fileID: 677940033}
   - component: {fileID: 677940032}
+  - component: {fileID: 677940037}
+  - component: {fileID: 677940036}
+  - component: {fileID: 677940035}
   m_Layer: 0
   m_Name: Demo Enemy  (5)
   m_TagString: Untagged
@@ -12197,11 +12462,11 @@ Transform:
   m_GameObject: {fileID: 677940030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.959546, y: -0.78732955, z: -4.579525}
+  m_LocalPosition: {x: -16.62, y: 0.91307163, z: 42.855556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &677940032
 SphereCollider:
@@ -12276,6 +12541,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677940030}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &677940035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677940030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &677940036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677940030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &677940037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677940030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &687866803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12478,6 +12806,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire
@@ -13033,6 +13377,9 @@ GameObject:
   - component: {fileID: 732998560}
   - component: {fileID: 732998559}
   - component: {fileID: 732998558}
+  - component: {fileID: 732998563}
+  - component: {fileID: 732998562}
+  - component: {fileID: 732998561}
   m_Layer: 0
   m_Name: Demo Enemy  (8)
   m_TagString: Untagged
@@ -13049,11 +13396,11 @@ Transform:
   m_GameObject: {fileID: 732998556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.989796, y: -0.78732955, z: -18.769276}
+  m_LocalPosition: {x: 11.89982, y: 0.91307163, z: 28.665806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &732998558
 SphereCollider:
@@ -13128,6 +13475,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732998556}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &732998561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732998556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &732998562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732998556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &732998563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732998556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &745246214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17489,6 +17899,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1736121244}
     m_Modifications:
+    - target: {fileID: 284575855742095257, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 284575856277983233, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 284575856499759248, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 551341891780577027, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 551341891993964434, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 551341893392046235, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247687708125444042, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247687708339879771, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247687708659361874, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284036521945721976, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284036523557188576, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284036523813567345, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483345133627779420, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748140809933143646, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783290757733652885, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207163215860161983, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268916454341666906, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5317919681360618368, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
       propertyPath: m_Name
       value: Throne Room
@@ -17504,6 +17982,18 @@ PrefabInstance:
     - target: {fileID: 6893569041174589314, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.08780587
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840393267722405381, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840393268071059092, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840393269329942941, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8499630195641030162, guid: 80433aba2e5d0bd46bb681312e701d05, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18809,6 +19299,9 @@ GameObject:
   - component: {fileID: 1028689444}
   - component: {fileID: 1028689443}
   - component: {fileID: 1028689442}
+  - component: {fileID: 1028689447}
+  - component: {fileID: 1028689446}
+  - component: {fileID: 1028689445}
   m_Layer: 0
   m_Name: Demo Enemy  (3)
   m_TagString: Untagged
@@ -18825,11 +19318,11 @@ Transform:
   m_GameObject: {fileID: 1028689440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.015415, y: -0.78732955, z: -36.392914}
+  m_LocalPosition: {x: -17.38, y: 0.91307163, z: 11.042168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1028689442
 SphereCollider:
@@ -18904,6 +19397,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028689440}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1028689445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028689440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1028689446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028689440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &1028689447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028689440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1032078669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19984,6 +20540,9 @@ GameObject:
   - component: {fileID: 1082192505}
   - component: {fileID: 1082192504}
   - component: {fileID: 1082192503}
+  - component: {fileID: 1082192509}
+  - component: {fileID: 1082192508}
+  - component: {fileID: 1082192507}
   m_Layer: 0
   m_Name: 'Demo Enemy '
   m_TagString: Untagged
@@ -20073,21 +20632,75 @@ Transform:
   m_GameObject: {fileID: 1082192502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0899754, y: 1.7004012, z: 47.43508}
+  m_LocalPosition: {x: -3.0899754, y: 1.7004012, z: 36.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 460362717}
-  - {fileID: 1999488893}
-  - {fileID: 732998557}
-  - {fileID: 304617080}
-  - {fileID: 677940031}
-  - {fileID: 2055526591}
-  - {fileID: 1028689441}
-  - {fileID: 1617646119}
-  - {fileID: 153838243}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082192507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082192502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1082192508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082192502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &1082192509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082192502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1082301393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20949,6 +21562,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (1)
@@ -24605,6 +25234,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire
@@ -26753,6 +27398,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (2)
@@ -28923,6 +29584,9 @@ GameObject:
   - component: {fileID: 1617646122}
   - component: {fileID: 1617646121}
   - component: {fileID: 1617646120}
+  - component: {fileID: 1617646125}
+  - component: {fileID: 1617646124}
+  - component: {fileID: 1617646123}
   m_Layer: 0
   m_Name: Demo Enemy  (7)
   m_TagString: Untagged
@@ -28939,11 +29603,11 @@ Transform:
   m_GameObject: {fileID: 1617646118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.60988, y: -0.78732955, z: -36.392914}
+  m_LocalPosition: {x: -22.699856, y: 0.91307163, z: 11.042168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1617646120
 SphereCollider:
@@ -29018,6 +29682,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617646118}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1617646123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617646118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1617646124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617646118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &1617646125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617646118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1626813765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30312,6 +31039,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (1)
@@ -30535,6 +31278,10 @@ MonoBehaviour:
   - {fileID: 0}
   totalClock: 5
   clockCount: 0
+  deadScreen: {fileID: 0}
+  health: 100
+  bloodParticle: {fileID: 0}
+  dead: 0
 --- !u!4 &1721471665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
@@ -35101,6 +35848,9 @@ GameObject:
   - component: {fileID: 1999488896}
   - component: {fileID: 1999488895}
   - component: {fileID: 1999488894}
+  - component: {fileID: 1999488899}
+  - component: {fileID: 1999488898}
+  - component: {fileID: 1999488897}
   m_Layer: 0
   m_Name: Demo Enemy  (4)
   m_TagString: Untagged
@@ -35117,11 +35867,11 @@ Transform:
   m_GameObject: {fileID: 1999488892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.959546, y: -0.78732955, z: -36.69673}
+  m_LocalPosition: {x: 11.869571, y: 0.91307163, z: 10.73835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1999488894
 SphereCollider:
@@ -35196,6 +35946,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999488892}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1999488897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999488892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1999488898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999488892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &1999488899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999488892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &2005684192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35455,6 +36268,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 900283075}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (1)
@@ -36035,6 +36864,9 @@ GameObject:
   - component: {fileID: 2055526594}
   - component: {fileID: 2055526593}
   - component: {fileID: 2055526592}
+  - component: {fileID: 2055526597}
+  - component: {fileID: 2055526596}
+  - component: {fileID: 2055526595}
   m_Layer: 0
   m_Name: Demo Enemy  (6)
   m_TagString: Untagged
@@ -36051,11 +36883,11 @@ Transform:
   m_GameObject: {fileID: 2055526590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.960424, y: -0.78732955, z: -4.575794}
+  m_LocalPosition: {x: -11.25, y: 0.91307163, z: 31.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082192506}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2055526592
 SphereCollider:
@@ -36130,6 +36962,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055526590}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2055526595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055526590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &2055526596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055526590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496f8645b8db6f47b2bc876a96f7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 1713489191}
+  Speed: 0.1
+  Range: 5
+--- !u!114 &2055526597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055526590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8dcf378562b88184fb9dc0755c45087f, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &2059128539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37632,6 +38527,15 @@ SceneRoots:
   - {fileID: 1683687630}
   - {fileID: 976612347}
   - {fileID: 1228518764}
+  - {fileID: 460362717}
+  - {fileID: 1999488893}
+  - {fileID: 732998557}
+  - {fileID: 304617080}
+  - {fileID: 677940031}
+  - {fileID: 2055526591}
+  - {fileID: 1028689441}
+  - {fileID: 1617646119}
+  - {fileID: 153838243}
   - {fileID: 1082192506}
   - {fileID: 1737969198}
   - {fileID: 187449514}

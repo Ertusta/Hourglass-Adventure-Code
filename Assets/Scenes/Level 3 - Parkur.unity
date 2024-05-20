@@ -127,6 +127,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (1)
@@ -580,7 +596,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2050284334}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57118290}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57118289}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57118288}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &43887693 stripped
 Transform:
@@ -723,6 +748,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7488241674975636283, guid: 6465b87706ef6eb41813e46b394c0311, type: 3}
   m_PrefabInstance: {fileID: 51160197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &57118287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 43887692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &57118288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57118287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &57118289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57118287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &57118290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57118287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &60040212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1983,6 +2076,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (21)
@@ -2301,6 +2410,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (2)
@@ -2487,6 +2612,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (19)
@@ -2870,6 +3011,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 484034, guid: 117e7d0bbafc64445bc82a0aca3d4d89, type: 3}
   m_PrefabInstance: {fileID: 212654942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &218444691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 1618007429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &233630659
 PrefabInstance:
@@ -3258,6 +3404,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (3)
@@ -4978,6 +5140,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (20)
@@ -6235,6 +6413,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (15)
@@ -7525,6 +7719,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (9)
@@ -7652,6 +7862,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6981547531103893610, guid: c18f4e321c8fe924a98ebeab783aa9a7, type: 3}
   m_PrefabInstance: {fileID: 549390070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &553961961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 622161778638464531, guid: 605634ec1c2d39d448b37dc690548058, type: 3}
+  m_PrefabInstance: {fileID: 154116687}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &558076694
 PrefabInstance:
@@ -8108,6 +8323,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (4)
@@ -9017,6 +9248,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (11)
@@ -9603,6 +9850,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (8)
@@ -10022,6 +10285,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (6)
@@ -10406,6 +10685,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (13)
@@ -10962,6 +11257,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (18)
@@ -12492,6 +12803,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1135386438494794854, guid: 5b9756bfeee30a04cb1f6cfc41cabef4, type: 3}
   m_PrefabInstance: {fileID: 919915591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &927439593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 1506075903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &931085021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13149,6 +13465,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 484034, guid: 117e7d0bbafc64445bc82a0aca3d4d89, type: 3}
   m_PrefabInstance: {fileID: 953595573}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955009678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 2140757653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &955057942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13421,6 +13742,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (12)
@@ -13545,6 +13882,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (17)
@@ -14111,7 +14464,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968294087}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1535506697}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1535506696}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1535506695}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &1030060711 stripped
 Transform:
@@ -14250,6 +14612,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (23)
@@ -15388,6 +15766,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 30, y: -30, z: -180}
+--- !u!1 &1101878233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 1355655578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1106094029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18359,13 +18742,85 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 431003560}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1355655582}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1355655581}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1355655580}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &1355655579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
   m_PrefabInstance: {fileID: 1355655578}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1355655580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101878233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1355655581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101878233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &1355655582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101878233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1357951641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20711,13 +21166,85 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935671677}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506075907}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506075906}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506075905}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &1506075904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
   m_PrefabInstance: {fileID: 1506075903}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1506075905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927439593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1506075906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927439593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &1506075907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927439593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1 &1510376742
 GameObject:
   m_ObjectHideFlags: 0
@@ -20890,7 +21417,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1189824880}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078594476}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078594475}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078594474}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &1518074490 stripped
 Transform:
@@ -21161,6 +21697,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6981547531103893610, guid: c18f4e321c8fe924a98ebeab783aa9a7, type: 3}
   m_PrefabInstance: {fileID: 1531189798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1535506694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 1030060710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535506695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535506694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1535506696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535506694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &1535506697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535506694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1543234490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21483,6 +22087,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (22)
@@ -21793,6 +22413,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (14)
@@ -22308,13 +22944,85 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 919915592}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618007433}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618007432}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618007431}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &1618007430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
   m_PrefabInstance: {fileID: 1618007429}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618007431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218444691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1618007432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218444691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &1618007433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218444691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1628102833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22385,6 +23093,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (10)
@@ -24983,6 +25707,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (5)
@@ -25045,6 +25785,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (7)
@@ -27048,6 +27804,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire
@@ -27996,6 +28768,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379305677}
     m_Modifications:
+    - target: {fileID: 1470071792446612191, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071792735496782, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470071793273353686, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582298200655627281, guid: 992da2b721711a04194dca87e692b038, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176558902990482534, guid: 992da2b721711a04194dca87e692b038, type: 3}
       propertyPath: m_Name
       value: torch_w_fire (16)
@@ -28101,6 +28889,74 @@ Transform:
   - {fileID: 1611878206}
   m_Father: {fileID: 1954611982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2078594473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+  m_PrefabInstance: {fileID: 1518074489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078594474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078594473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &2078594475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078594473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &2078594476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078594473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &2080080995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28885,13 +29741,85 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1732712918}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140757657}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140757656}
+    - targetCorrespondingSourceObject: {fileID: 8899876951129301640, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140757655}
   m_SourcePrefab: {fileID: 100100000, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
 --- !u!4 &2140757654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8899876951128817320, guid: 157e7428c827b7846ad361e3c6205bfc, type: 3}
   m_PrefabInstance: {fileID: 2140757653}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2140757655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955009678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &2140757656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955009678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc94b154dbd82924aa193d00532ac9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  Target1: {fileID: 553961961}
+  Speed: 1
+  Range: 5
+--- !u!114 &2140757657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955009678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 2
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: aba62d7699757c141bd6f159d20acdd2, type: 3}
+  m_InferenceDevice: 3
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &2141459596
 PrefabInstance:
   m_ObjectHideFlags: 0
